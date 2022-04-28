@@ -2,7 +2,7 @@
     <button @click="$emit('click')"><slot></slot></button>
 </template>
 
-<script setup lang="ts">
+<script setup>
 const props = defineProps({
     type: String,
     theme: String, 

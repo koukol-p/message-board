@@ -5,7 +5,7 @@
   <router-view></router-view>
 </template>
 
-<style>
-@import '@/assets/base.css';
+<style lang="scss">
+@import './assets/base.scss';
 
 </style>

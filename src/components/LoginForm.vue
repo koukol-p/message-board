@@ -13,7 +13,7 @@
     </form>
 </template>
 
-<script setup lang="ts">
+<script setup>
 import { ref } from 'vue';
 import Button from "@/components/shared/Button.vue"
 
@@ -21,13 +21,13 @@ const email = ref("")
 const password = ref("")
 </script>
 
-<style scoped>
+<style scoped lang="scss">
     form {
         display: flex;
         flex-direction: column;
         
         min-width: 210px;
-        background-color: rgb(67, 229, 156);
+        background-color: yellow;
         padding: 1.5rem;
         border-radius: 1rem;
         box-shadow: 2px 4px 6px rgba(0,0,0,0.2);
