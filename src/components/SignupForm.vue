@@ -1,5 +1,5 @@
 <template>
-    <form>
+    <form class="form-container">
         <div class="input-group">
             <label for="username">User name:</label>
             <input id="username" type="text" required v-model="username">
@@ -14,7 +14,7 @@
             <label for="password">Password:</label>
             <input id="password" type="password" required v-model="password">
         </div>
-        <Button type="submit">Sign Up</Button>
+        <Button theme="primary" type="submit">Sign Up</Button>
     </form>
 </template>
 
@@ -23,39 +23,11 @@ import { ref } from 'vue';
 import Button from "@/components/shared/Button.vue"
 
 
-
 const username = ref("")
 const email = ref("")
 const password = ref("")
 </script>
 
 <style scoped lang="scss">
-    @import "@/assets/_variables.scss";
-    form {
-        display: flex;
-        flex-direction: column;
-        margin: 4px;
-        min-width: 210px;
-        background-color: $myblue;
-        padding: 1.5rem;
-        border-radius: 1rem;
-        box-shadow: 2px 4px 6px rgba(0,0,0,0.2);
-        
-    }
     
-    .input-group {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin-bottom: 1rem;
-    }
-    .input-group input {
-        border-radius: 2px;
-        background-color: rgb(220, 220, 200);
-        outline: none;
-        border: none;
-        margin-left: 4px;
-        padding: 4px;
-        
-    }
 </style>

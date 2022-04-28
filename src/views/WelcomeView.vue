@@ -1,5 +1,5 @@
 <template>
-<div class="form-container">
+<div class="container">
     <SignupForm></SignupForm>
     <LoginForm />
 </div>
@@ -14,8 +14,9 @@ export default {
 </script>
 
 <style>
-.form-container {
+.container {
     display: flex;
+    
     justify-content: center;
     padding-top: 40px;
     height: 100%;
