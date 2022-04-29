@@ -1,5 +1,5 @@
 <template>
-    <form class="form-container">
+    <form class="form-container" @submit.prevent="handleSubmit">
         <div class="input-group">
             <label for="username">User name:</label>
             <input id="username" type="text" required v-model="username">
@@ -21,11 +21,28 @@
 <script setup>
 import { ref } from 'vue';
 import Button from "@/components/shared/Button.vue"
-
+import {useRouter} from "vue-router"
+import { useStore } from 'vuex';
 
 const username = ref("")
 const email = ref("")
 const password = ref("")
+
+const router = useRouter();
+const store = useStore();
+
+const handleSubmit = async () => {
+    try {
+        await store.dispatch("signup", {
+            email: email.value,
+            password: password.value,
+            displayName: username.value
+        })
+        router.push("/")
+    } catch (err) {
+
+    }
+}
 </script>
 
 <style scoped lang="scss">

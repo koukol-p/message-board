@@ -5,12 +5,11 @@
 </div>
 </template>
 
-<script>
+<script setup>
 import SignupForm from "@/components/SignupForm.vue"
 import LoginForm from "@/components/LoginForm.vue"
-export default {
-    components: {SignupForm, LoginForm}
-};
+import { useStore } from "vuex";
+
 </script>
 
 <style>
@@ -18,6 +17,7 @@ export default {
     display: flex;
     
     justify-content: center;
+    align-content: center;
     padding-top: 40px;
     height: 100%;
 
