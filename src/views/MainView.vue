@@ -1,7 +1,6 @@
 <template>
-  <div>
-    Main View
-    <button @click="handleLogout">LogOut</button>
+  <div class="main-page">
+    <Posts />
   </div>
 </template>
 
@@ -10,7 +9,7 @@ import { onAuthStateChanged } from "@firebase/auth";
 import { useRouter } from "vue-router";
 import { useStore } from "vuex";
 import { projectAuth } from "../firebase/config";
-
+import Posts from "../components/Posts.vue";
 const store = useStore();
 const router = useRouter();
 
@@ -28,4 +27,11 @@ onAuthStateChanged(projectAuth, (user) => {
 });
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.main-page {
+  overflow-y: scroll;
+  display: grid;
+  grid-template-rows: auto;
+  grid-template-columns: 1fr auto 1fr;
+}
+</style>
