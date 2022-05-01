@@ -1,11 +1,19 @@
-<script setup lang="ts">
+<script setup>
+import Navbar from "@/components/shared/Navbar.vue";
 </script>
 
 <template>
-  <router-view></router-view>
+  <div class="main-container">
+    <Navbar />
+    <router-view></router-view>
+  </div>
 </template>
 
 <style lang="scss">
-@import './assets/base.scss';
-
+@import "./assets/base.scss";
+.main-container {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: 1fr auto;
+}
 </style>
