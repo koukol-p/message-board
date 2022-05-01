@@ -34,6 +34,7 @@ export const auth = {
 
       context.commit("setUser", res.user);
     },
+    async createUser(context, { displayName, id }) {},
     async login(context, { email, password }) {
       const res = await signInWithEmailAndPassword(
         projectAuth,

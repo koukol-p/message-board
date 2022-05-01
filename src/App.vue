@@ -14,7 +14,7 @@ import Navbar from "./components/shared/Navbar.vue";
 .main-container {
   display: grid;
 
-  grid-template-rows: 1fr auto;
+  grid-template-rows: auto 1fr;
 
   height: 100vh;
 }

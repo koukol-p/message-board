@@ -1,59 +1,18 @@
 <template>
   <div class="posts">
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit
-    praesentium, illo ipsum nihil neque voluptatum quisquam incidunt officia
-    quas dignissimos ab nam nemo, delectus error accusamus possimus cum
-    aspernatur maiores! Lorem ipsum dolor sit, amet consectetur adipisicing
-    elit. Sint nesciunt architecto cupiditate quia temporibus quaerat maiores,
-    inventore dolorum iusto beatae magnam sit id eaque accusamus fuga incidunt
-    illo reprehenderit optio. Lorem ipsum dolor sit amet consectetur adipisicing
-    elit. Impedit praesentium, illo ipsum nihil neque voluptatum quisquam
-    incidunt officia quas dignissimos ab nam nemo, delectus error accusamus
-    possimus cum aspernatur maiores! Lorem ipsum dolor sit, amet consectetur
-    adipisicing elit. Sint nesciunt architecto cupiditate quia temporibus
-    quaerat maiores, inventore dolorum iusto beatae magnam sit id eaque
-    accusamus fuga incidunt illo reprehenderit optio. Lorem ipsum dolor sit amet
-    consectetur adipisicing elit. Impedit praesentium, illo ipsum nihil neque
-    voluptatum quisquam incidunt officia quas dignissimos ab nam nemo, delectus
-    error accusamus possimus cum aspernatur maiores! Lorem ipsum dolor sit, amet
-    consectetur adipisicing elit. Sint nesciunt architecto cupiditate quia
-    temporibus quaerat maiores, inventore dolorum iusto beatae magnam sit id
-    eaque accusamus fuga incidunt illo reprehenderit optio. Lorem ipsum dolor
-    sit amet consectetur adipisicing elit. Impedit praesentium, illo ipsum nihil
-    neque voluptatum quisquam incidunt officia quas dignissimos ab nam nemo,
-    delectus error accusamus possimus cum aspernatur maiores! Lorem ipsum dolor
-    sit, amet consectetur adipisicing elit. Sint nesciunt architecto cupiditate
-    quia temporibus quaerat maiores, inventore dolorum iusto beatae magnam sit
-    id eaque accusamus fuga incidunt illo reprehenderit optio.Lorem ipsum dolor
-    sit amet consectetur adipisicing elit. Impedit praesentium, illo ipsum nihil
-    neque voluptatum quisquam incidunt officia quas dignissimos ab nam nemo,
-    delectus error accusamus possimus cum aspernatur maiores! Lorem ipsum dolor
-    sit, amet consectetur adipisicing elit. Sint nesciunt architecto cupiditate
-    quia temporibus quaerat maiores, inventore dolorum iusto beatae magnam sit
-    id eaque accusamus fuga incidunt illo reprehenderit optio. Lorem ipsum dolor
-    sit amet consectetur adipisicing elit. Impedit praesentium, illo ipsum nihil
-    neque voluptatum quisquam incidunt officia quas dignissimos ab nam nemo,
-    delectus error accusamus possimus cum aspernatur maiores! Lorem ipsum dolor
-    sit, amet consectetur adipisicing elit. Sint nesciunt architecto cupiditate
-    quia temporibus quaerat maiores, inventore dolorum iusto beatae magnam sit
-    id eaque accusamus fuga incidunt illo reprehenderit optio. Lorem ipsum dolor
-    sit amet consectetur adipisicing elit. Impedit praesentium, illo ipsum nihil
-    neque voluptatum quisquam incidunt officia quas dignissimos ab nam nemo,
-    delectus error accusamus possimus cum aspernatur maiores! Lorem ipsum dolor
-    sit, amet consectetur adipisicing elit. Sint nesciunt architecto cupiditate
-    quia temporibus quaerat maiores, inventore dolorum iusto beatae magnam sit
-    id eaque accusamus fuga incidunt illo reprehenderit optio. Lorem ipsum dolor
-    sit amet consectetur adipisicing elit. Impedit praesentium, illo ipsum nihil
-    neque voluptatum quisquam incidunt officia quas dignissimos ab nam nemo,
-    delectus error accusamus possimus cum aspernatur maiores! Lorem ipsum dolor
-    sit, amet consectetur adipisicing elit. Sint nesciunt architecto cupiditate
-    quia temporibus quaerat maiores, inventore dolorum iusto beatae magnam sit
-    id eaque accusamus fuga incidunt illo reprehenderit optio.
+    <Post />
+    <Post />
+    <Post />
+    <Post />
+    <Post />
+    <Post />
+    <Post />
   </div>
 </template>
 
 <script>
-export default {};
+import Post from "./Post.vue";
+export default { components: { Post } };
 </script>
 
 <style lang="scss" scoped>
@@ -64,7 +23,7 @@ export default {};
   border-color: $offwhite-d;
   border-style: solid;
   padding: 8px;
-  grid-column-start: 1;
+
   margin: 0;
 }
 </style>
