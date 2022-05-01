@@ -30,7 +30,5 @@ textarea {
   min-height: 120px;
 }
 #title {
-  flex: 1;
-  margin-left: 16px;
 }
 </style>

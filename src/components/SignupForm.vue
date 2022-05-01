@@ -38,9 +38,10 @@ const handleSubmit = async () => {
       password: password.value,
       displayName: username.value,
     });
+
     router.push("/");
   } catch (err) {
-    console.log(error.message);
+    console.log(err.message);
   }
 };
 </script>

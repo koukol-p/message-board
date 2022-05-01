@@ -6,7 +6,8 @@ import {
   updateCurrentUser,
   updateProfile,
 } from "@firebase/auth";
-import { projectAuth } from "../../firebase/config";
+import { addDoc, doc, setDoc } from "@firebase/firestore";
+import { projectAuth, projectFirestore } from "../../firebase/config";
 export const auth = {
   state: () => {
     return {
@@ -24,6 +25,11 @@ export const auth = {
     },
   },
   actions: {
+    async createUser(context, { displayName, id }) {
+      await setDoc(doc(projectFirestore, "users", id), {
+        displayName,
+      });
+    },
     async signup(context, { email, password, displayName }) {
       const res = await createUserWithEmailAndPassword(
         projectAuth,
@@ -31,10 +37,11 @@ export const auth = {
         password
       );
       await updateProfile(res.user, { displayName });
+      await context.dispatch("createUser", { displayName, id: res.user.uid });
 
       context.commit("setUser", res.user);
     },
-    async createUser(context, { displayName, id }) {},
+
     async login(context, { email, password }) {
       const res = await signInWithEmailAndPassword(
         projectAuth,
