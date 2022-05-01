@@ -64,8 +64,7 @@ export default {};
   border-color: $offwhite-d;
   border-style: solid;
   padding: 8px;
-  grid-column-start: 2;
-
-  width: 500px;
+  grid-column-start: 1;
+  margin: 0;
 }
 </style>

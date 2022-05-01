@@ -13,13 +13,6 @@ import Posts from "../components/Posts.vue";
 const store = useStore();
 const router = useRouter();
 
-const handleLogout = () => {
-  try {
-    store.dispatch("logout");
-  } catch (err) {
-    console.log(err);
-  }
-};
 onAuthStateChanged(projectAuth, (user) => {
   if (!user) {
     router.push("/auth");
@@ -30,8 +23,6 @@ onAuthStateChanged(projectAuth, (user) => {
 <style lang="scss" scoped>
 .main-page {
   overflow-y: scroll;
-  display: grid;
-  grid-template-rows: auto;
-  grid-template-columns: 1fr auto 1fr;
+  margin: 0;
 }
 </style>
