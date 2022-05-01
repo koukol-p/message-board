@@ -1,10 +1,10 @@
 <script setup>
-import Sidebar from "./components/shared/Sidebar.vue";
+import Navbar from "./components/shared/Navbar.vue";
 </script>
 
 <template>
   <div class="main-container">
-    <Sidebar />
+    <Navbar />
     <router-view></router-view>
   </div>
 </template>
@@ -14,7 +14,7 @@ import Sidebar from "./components/shared/Sidebar.vue";
 .main-container {
   display: grid;
 
-  grid-template-columns: 3fr 9fr;
+  grid-template-rows: 1fr auto;
 
   height: 100vh;
 }
