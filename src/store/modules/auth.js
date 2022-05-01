@@ -1,5 +1,6 @@
 import {
   createUserWithEmailAndPassword,
+  onAuthStateChanged,
   signInWithEmailAndPassword,
   signOut,
   updateCurrentUser,
@@ -10,12 +11,16 @@ export const auth = {
   state: () => {
     return {
       user: null,
+      authReady: false,
     };
   },
   mutations: {
     setUser(state, payload) {
       state.user = payload;
       console.log("USER", state.user);
+    },
+    setAuthReady(state, payload) {
+      state.authReady = payload;
     },
   },
   actions: {
@@ -38,7 +43,7 @@ export const auth = {
       context.commit("setUser", res.user);
     },
     async logout(context) {
-      await signOut();
+      await signOut(projectAuth);
       context.commit("setUser", null);
     },
   },

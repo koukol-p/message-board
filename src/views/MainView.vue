@@ -1,22 +1,24 @@
 <template>
-    <div>
-        Main View
-    </div>
+  <div>
+    Main View
+    <button @click="handleLogout">LogOut</button>
+  </div>
 </template>
 
 <script setup>
-import { useRouter } from 'vue-router';
-import { useStore } from 'vuex';
+import { useRouter } from "vue-router";
+import { useStore } from "vuex";
 
-const store = useStore()
-const router = useRouter()
+const store = useStore();
+const router = useRouter();
 
-//redirect to auth when not logged in
-if (!store.state.auth.user) {
-    router.push("/auth")
-}
+const handleLogout = () => {
+  try {
+    store.dispatch("logout");
+  } catch (err) {
+    console.log(err);
+  }
+};
 </script>
 
-<style lang="scss" scoped>
-
-</style>
+<style lang="scss" scoped></style>
