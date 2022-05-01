@@ -21,9 +21,12 @@ const handleClose = () => {
   height: 100vh;
   background-color: rgba(0, 0, 0, 0.4);
   z-index: 50;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
   .modal-content {
-    margin: 40px auto;
+    // margin: 40px auto;
   }
 }
 </style>

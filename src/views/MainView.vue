@@ -1,6 +1,6 @@
 <template>
   <div class="main-page">
-    <button @click="formOpen = !formOpen">Toggle form</button>
+    <button class="add-post-button" @click="formOpen = !formOpen">+</button>
     <Modal @close-modal="formOpen = false" v-if="formOpen"><PostForm /></Modal>
     <Posts />
   </div>
@@ -31,8 +31,24 @@ onAuthStateChanged(projectAuth, (user) => {
 </script>
 
 <style lang="scss" scoped>
+@import "@/assets/_variables.scss";
 .main-page {
   overflow-y: scroll;
   margin: 0;
+}
+.add-post-button {
+  outline: none;
+  border: 0;
+  width: 100%;
+  background-color: $primary-dd;
+  color: $offwhite;
+  padding: 2px;
+
+  font-size: 1.4rem;
+
+  &:hover {
+    background-color: $primary-d;
+    cursor: pointer;
+  }
 }
 </style>

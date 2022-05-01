@@ -1,7 +1,7 @@
 <template>
   <form class="form-container">
     <div class="input-group">
-      <label for="title">title:</label>
+      <label for="title">Title:</label>
       <input id="title" type="text" required v-model="title" />
     </div>
 
@@ -28,5 +28,9 @@ textarea {
   resize: none;
   width: 100%;
   min-height: 120px;
+}
+#title {
+  flex: 1;
+  margin-left: 16px;
 }
 </style>
